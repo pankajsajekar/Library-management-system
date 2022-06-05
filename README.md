@@ -16,7 +16,7 @@ py -m venv venv
 ```
 .\venv\Scripts\activate
 ```
-Create database of Name : keywordio__
+Create database of Name : keywordio <br/>
 Import keywordio.sql file in MySQL db
 
 ```
