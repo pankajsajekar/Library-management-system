@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block maincontent %}
+<div class="d-flex flex-row-reverse mr-5">
+    <div class="p-2"><button class="btn btn-default"><a href="{% url 'addnewbook' %}">Add Book</a></button></div>
+</div>
+<h2 class="mb-3 d-flex justify-content-left"><strong>Book list</strong></h2>
+<table class="table table-hover mt-3 mx-3">
+    <thead class="thead-dark">
+        <tr style="height: 15px;">
+            <th scope="col">#</th>
+            <th scope="col">Book Name</th>
+            <th scope="col">Author Name</th>
+            <th scope="col">Cover Img</th>
+            <td scope="col"></td>
+            <td scope="col"></td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for singlebook in allbook_obj %}
+        <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{singlebook.bookname}}</td>
+            <td>{{singlebook.bookauthorname}}</td>
+            <td>{% if singlebook.bookcoverimage %}
+                <img class="" height="100px" src="{{ singlebook.bookcoverimage.url }}" alt="">
+                {% endif %}
+            </td>
+            <td class="d-flex justify-content-center"><a href="{% url 'editbook' singlebook.id %}">Edit</a></td>
+            <td class="d-flex justify-content-center"><a href="{% url 'deletebook' singlebook.id %}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

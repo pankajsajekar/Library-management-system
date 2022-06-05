@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block maincontent %}
+<div class="container">
+    <h2 class=" my-3 d-flex justify-content-center"><strong class="text-info">Open your Library world ...</strong></h2>
+    <div class="row px-xl-5 pb-3">
+    {% for singlebook in allbook_obj %}
+    <div class="col-md-4">
+    <div class="card my-4" style="background-color: #f7f7f7;">
+        {% if singlebook.bookcoverimage %}
+        <img class="card-img-top" src="{{ singlebook.bookcoverimage.url }}" alt="Card image cap" height="250px" width="100px">
+        {% endif %}
+        <div class="card-body">
+            <h5 class="card-title">Book Name: {{singlebook.bookname}}</h5>
+            <p class="card-text">Author Name: {{singlebook.bookauthorname}}</p>
+            <p class="card-text"><small class="text-muted">Description: {{singlebook.bookdescription}}</small></p>
+        </div>
+    </div>
+    </div>
+    {% endfor %}
+</div>
+</div>
+{% endblock %}
