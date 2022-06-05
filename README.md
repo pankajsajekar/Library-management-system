@@ -16,7 +16,7 @@ py -m venv venv
 ```
 .\venv\Scripts\activate
 ```
-Create database of Name : keywordio __
+Create database of Name : keywordio__
 Import keywordio.sql file in MySQL db
 
 ```
@@ -28,8 +28,8 @@ python manage.py makemigrations
 ```
 python manage.py migrate
 ```
-Used already created User __
-User Email : admin@gmail.com __
+Used already created User__
+User Email : admin@gmail.com__
 User Password : 321
 ```
 python manage.py runserver
