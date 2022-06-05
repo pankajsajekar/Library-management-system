@@ -1,8 +1,6 @@
 # Library-management-system
 Library Management System
 
-# Event Calendar in Django
-
 ### Python is required
 ## Steps to Setup Web App
 ```
@@ -18,10 +16,8 @@ py -m venv venv
 ```
 .\venv\Scripts\activate
 ```
-
 Create database of Name : keywordio
 Import keywordio.sql file in MySQL db
-
 
 ```
 pip install -r requirements.txt
