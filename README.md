@@ -28,8 +28,8 @@ python manage.py makemigrations
 ```
 python manage.py migrate
 ```
-Used already created User__
-User Email : admin@gmail.com__
+Used already created User <br/>
+User Email : admin@gmail.com <br/>
 User Password : 321
 ```
 python manage.py runserver
