@@ -28,7 +28,7 @@ python manage.py makemigrations
 ```
 python manage.py migrate
 ```
-Used already created User <br/>
+Used already created User for Admin Login <br/>
 User Email : admin@gmail.com <br/>
 User Password : 321
 ```
